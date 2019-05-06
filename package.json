@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "notes for boomtown!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesdollar/notes.git"
+  },
+  "author": "Wes Dollar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesdollar/notes/issues"
+  },
+  "homepage": "https://github.com/wesdollar/notes#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
