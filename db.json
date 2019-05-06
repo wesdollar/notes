@@ -1,22 +1,16 @@
 {
-    "notes": [
-        {
-            "id": 1,
-            "title": "First Note",
-            "body": "This is the body.",
-            "removed": false
-        },
-        {
-            "id": 2,
-            "title": "Second Note",
-            "body": "This is the body.",
-            "removed": false
-        },
-        {
-            "id": 3,
-            "title": "Third Note",
-            "body": "This is the body.",
-            "removed": true
-        }
-    ]
+  "notes": [
+    {
+      "id": 1,
+      "title": "Hello, World",
+      "body": "Because we don't see \"hello, world\" enough.",
+      "removed": false
+    },
+    {
+      "id": 2,
+      "title": "Welcome!",
+      "body": "We're glad to have you here. Feel free to add some notes!",
+      "removed": false
+    }
+  ]
 }

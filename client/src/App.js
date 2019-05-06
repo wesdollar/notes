@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.scss';
 import Notes from './pages/Notes.jsx';
 import Home from './pages/Home.jsx';
@@ -8,20 +8,18 @@ import AddUpdateForm from './pages/AddUpdateForm';
 class App extends Component {
   render() {
     const App = () => (
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/list' component={Notes}/>
-        <Route path='/notes-form' component={AddUpdateForm}/>
-      </Switch> 
+      <Router>
+        <Route exact path='/' component={Home} />
+        <Route path='/notes' component={Notes} />
+        <Route path='/notes-form/:id?' component={AddUpdateForm} />
+      </Router> 
     )
 
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col">
-            <Switch>
-              <App/>
-            </Switch>
+          <div className="col-md-4 offset-md-4">
+            <App />
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Notes = ({notes}) => {
     return (
         <React.Fragment>
             {notes.map((note) => (
-                <Note title={note.title} body={note.body} />
+                <Note title={note.title} body={note.body} noteId={note.id} />
             ))}
         </React.Fragment>
     )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from "../components/header";
 import Notes from "../components/notes";
+import { Link } from "react-router-dom";
 
 class List extends Component {
   // Initialize the state
@@ -28,6 +29,11 @@ class List extends Component {
 
     return (
       <React.Fragment>
+        <Link to={'./notes-form'}>
+          <span className="btn btn-primary float-right">
+            Add Note
+          </span>
+        </Link>
         <Header text="All Notes" />
         <Notes notes={notes} />
       </React.Fragment>
