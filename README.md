@@ -6,6 +6,7 @@ A simple tool based on Express/React for logging notes.
 
 * Create local directory of your preference
 * Init git and pull repo
+  * `git init` in desired directory
   * `git remote add origin https://github.com/wesdollar/notes.git`
   * `git pull origin master`
 * Run `npm i` in both root directory and `./client`
