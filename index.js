@@ -20,6 +20,11 @@ app.get('/api/getNotes', (req, res) => {
     return res.json(notes);
 });
 
+app.post('/api/createNote', (req, res) => {
+    console.log(req);
+    res.json('POST request to the homepage');
+});
+
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
