@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Note = ({id, title, body}) => {
-    
-    return <h1>{text}</h1>;
-}
+const Note = ({title, body}) => (
+    <div className="note">
+        <h1>{title}</h1>
+        <p>
+            {body}
+        </p> 
+    </div>
+);
 
 Note.propTypes = {
-    id: PropTypes.int.isRequired
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired
 }
 
-Note.defaultProps = {
-    text: "Hello, World!"
-};
-
-export default Header;
+export default Note;

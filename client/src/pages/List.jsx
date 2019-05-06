@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from "../components/header";
+import Notes from "../components/notes";
 
 class List extends Component {
   // Initialize the state
@@ -28,23 +29,7 @@ class List extends Component {
     return (
       <React.Fragment>
         <Header text="All Notes" />
-        
-        {notes.length ? (
-          <React.Fragment>
-            {notes.map((note) => {
-              return (
-                <div key={`note-${note.id}`}>
-                  {note.title}
-                </div>
-              );
-            })}
-          </React.Fragment>
-        ) : (
-            <React.Fragment>
-              <h2>No Notes Found</h2>
-            </React.Fragment>
-          )
-        }
+        <Notes notes={notes} />
       </React.Fragment>
     );
   }

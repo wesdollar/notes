@@ -8,10 +8,12 @@ class App extends Component {
   render() {
     const App = () => (
       <div className="App">
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/list' component={List}/>
-        </Switch>
+        <header className="App-header">
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/list' component={List}/>
+          </Switch> 
+        </header>
       </div>
     )
     return (
