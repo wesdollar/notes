@@ -15,3 +15,6 @@ A simple tool based on Express/React for logging notes.
 * In a second terminal, fire up client by running `npm start` in `./client`
   * This command should open your default browser. If not, navigate to `localhost:3000` once compiled.
   * Terminal will need to remain open during session
+
+  ## Housekeeping
+  * **DO NOT** commit `db.json`, which should be captured in the `.gitignore`
