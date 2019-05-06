@@ -10,7 +10,7 @@ class App extends Component {
     const App = () => (
       <Router>
         <Route exact path='/' component={Home} />
-        <Route path='/notes' component={Notes} />
+        <Route path='/notes/:id?' component={Notes} />
         <Route path='/notes-form/:id?' component={AddUpdateForm} />
       </Router> 
     )
