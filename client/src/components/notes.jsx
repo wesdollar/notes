@@ -18,6 +18,10 @@ const Notes = ({notes}) => {
 
 Notes.propTypes = {
     notes: PropTypes.array.isRequired
-}
+};
+
+Notes.defaultProps = {
+    notes: []
+};
 
 export default Notes;

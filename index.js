@@ -1,5 +1,10 @@
 const express = require('express');
 const path = require('path');
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+
+const adapter = new FileSync('db.json')
+const db = low(adapter)
 
 const app = express();
 
@@ -7,23 +12,10 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/getNotes', (req, res) => {
-    const notes = [
-        {
-            id: 1,
-            title: "First Note",
-            body: "This is the body."
-        },
-        {
-            id: 2,
-            title: "Second Note",
-            body: "This is the body."
-        },
-        {
-            id: 3,
-            title: "Third Note",
-            body: "This is the body."
-        }
-    ];
+    const notes = db.get('notes')
+        .filter({removed: false})
+        .sortBy('id')
+        .value();
     
     return res.json(notes);
 });
