@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 
-const handleOnClick = noteId => {
-  window.location.href = `/notes-form/${noteId}`;
-};
-
-const Note = ({ title, body, noteId }) => (
+export const Note = ({ title, body, noteId, history }) => (
   <div className="card">
     <h2>{title}</h2>
     <p>{body}</p>
-    <button className="btn btn-primary" onClick={() => handleOnClick(noteId)}>
+    <button
+      className="btn btn-primary"
+      onClick={() => history.push(`/notes-form/${noteId}`)}
+    >
       Edit Note
     </button>
   </div>
@@ -21,4 +21,4 @@ Note.propTypes = {
   noteId: PropTypes.number.isRequired
 };
 
-export default Note;
+export default withRouter(Note);

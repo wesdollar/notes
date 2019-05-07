@@ -1,15 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Note from "../../components/note";
+import { Note } from "../../components/note";
 
 const props = {
   title: "Phish",
   body: "...take care of your shoes.",
-  noteId: 555
+  noteId: 555,
+  history: {
+    push: jest.fn()
+  }
 };
 
-// TODO: handleOnClick
-// const handleClickSpy = jest.spyOn(Note.prototype, "handleOnClick");
 const component = shallow(<Note {...props} />);
 
 it("renders", () => {
@@ -24,7 +25,7 @@ it("renders body from props", () => {
   expect(component.find("p").text()).toEqual(props.body);
 });
 
-// it("handles onClick", () => {
-//   component.find("button").simulate("click");
-//   expect(handleClickSpy).toHaveBeeenCalled();
-// });
+it("handles onClick", () => {
+  component.find("button").simulate("click");
+  expect(props.history.push).toHaveBeenCalled();
+});
