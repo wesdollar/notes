@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { get } from "lodash";
 
 class List extends Component {
-  // Initialize the state
   constructor(props) {
     super(props);
     this.state = {
