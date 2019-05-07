@@ -8,6 +8,7 @@ A simple tool based on Express/React for logging notes.
 - Jest w/ Enzyme for client-side testing
 - Sass
 - Webpack and other configurations by way of Create React App
+- Linted using `react-app` with Prettier for formatting
 
 ## Install
 
