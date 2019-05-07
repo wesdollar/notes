@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Hello, World",
-      "body": "Because we don't see \"hello, world\" enough.",
+      "body": "Because we don't see \"hello, world\" enough. /s",
       "removed": false
     },
     {
@@ -11,6 +11,12 @@
       "title": "Welcome!",
       "body": "We're glad to have you here. Feel free to add some notes!",
       "removed": false
+    },
+    {
+      "id": 3,
+      "title": "Hi, Kate!",
+      "body": ":) <3 W$",
+      "removed": true
     }
   ]
 }
