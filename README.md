@@ -2,19 +2,28 @@
 
 A simple tool based on Express/React for logging notes.
 
+## The Stack
+
+- Express server, React client
+- Jest w/ Enzyme for client-side testing
+- Sass
+- Webpack and other configurations by way of Create React App
+
 ## Install
 
-* Create local directory of your preference
-* Init git and pull repo
-  * `git init` in desired directory
-  * `git remote add origin https://github.com/wesdollar/notes.git`
-  * `git pull origin master`
-* Run `npm i` in both root directory and `./client`
-* Fire up Express by running `npm start` in root directory
-  * Terminal will need to remain open during session
-* In a second terminal, fire up client by running `npm start` in `./client`
-  * This command should open your default browser. If not, navigate to `localhost:3000` once compiled.
-  * Terminal will need to remain open during session
+- Create local directory of your preference
+- Init git and pull repo
+  - `git init` in desired directory
+  - `git remote add origin https://github.com/wesdollar/notes.git`
+  - `git pull origin master`
+- Run `npm i` in both root directory and `./client`
+- Fire up Express by running `npm start` in root directory
+  - Terminal will need to remain open during session
+- In a second terminal, fire up client by running `npm start` in `./client`
+  - This command should open your default browser. If not, navigate to `localhost:3000` once compiled.
+  - Terminal will need to remain open during session
 
-  ## Housekeeping
-  * **DO NOT** commit `db.json`, which should be captured in the `.gitignore`
+## Housekeeping
+
+- Some workspace settings and recommended VS Code extensions have been included in the repo
+- **DO NOT** commit `db.json`, which should be captured in the `.gitignore`
