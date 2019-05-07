@@ -12,7 +12,7 @@ class List extends Component {
     this.state = {
       notes: [],
       isSingleNote: false
-    }
+    };
   }
 
   // Fetch the list on first mount
@@ -23,37 +23,33 @@ class List extends Component {
     if (noteId) {
       this.setState({ isSingleNote: true });
       this.getSingleNote(noteId);
-    }
-    else {
+    } else {
       this.getNotes();
     }
-    
   }
 
   // Retrieves the list of items from the Express app
   getNotes = () => {
-    fetch('/api/getNotes')
+    fetch("/api/getNotes")
       .then(res => res.json())
       .then(notes => this.setState({ notes }));
-  }
+  };
 
   getSingleNote = noteId => {
     fetch(`/api/notes/${noteId}`)
       .then(res => res.json())
       .then(notes => this.setState({ notes: [notes] }));
-  }
+  };
 
   render() {
     const { notes, isSingleNote } = this.state;
 
     return (
       <React.Fragment>
-        <Link to={'./notes-form'}>
-          <span className="btn btn-primary float-right">
-            Add Note
-          </span>
+        <Link to={"./notes-form"}>
+          <span className="btn btn-primary float-right">Add Note</span>
         </Link>
-        <Header text={ isSingleNote ? "Your Note" : "All Notes" } />
+        <Header text={isSingleNote ? "Your Note" : "All Notes"} />
         <Notes notes={notes} />
       </React.Fragment>
     );

@@ -22,5 +22,15 @@
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "prettier": "1.17.0",
+    "pretty-quick": "^1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
