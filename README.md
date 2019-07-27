@@ -1,6 +1,6 @@
 # Notes
 
-A simple tool based on Express/React for logging notes.
+A simple boilerplate/starter for getting React with an Express backend up and going. Comes complete with component and test examples, ES-lint w/ React-lint, Prettier, React Router v5, Enzyme, recommended VS Code extensions and settings, and a few other nice treats.
 
 ## The Stack
 
